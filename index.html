@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRREEMPLAZABLE - Domina la IA y Conviértete en el Profesional del Futuro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --accent: #f97316;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.875rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-lg {
+            font-size: 1.125rem;
+            padding: 1rem 2rem;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background-color: #ea580c;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        /* Hero section */
+        .hero {
+            padding: 10rem 0 6rem;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89f64e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .countdown {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .countdown-title {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .countdown-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .countdown-number {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 0.25rem;
+            padding: 0.5rem 1rem;
+            min-width: 80px;
+        }
+        
+        .countdown-label {
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            opacity: 0.8;
+        }
+        
+        /* Benefits section */
+        .benefits {
+            padding: 5rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            background: var(--primary);
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Program structure */
+        .program {
+            padding: 5rem 0;
+            background-color: #f1f5f9;
+        }
+        
+        .program-timeline {
+            margin-top: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        
+        .program-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: calc(50px / 2);
+            width: 4px;
+            background-color: var(--primary);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-marker {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .timeline-marker::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .timeline-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .timeline-weeks {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.25rem 0.5rem;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 0.25rem;
+        }
+        
+        /* Tools section */
+        .tools {
+            padding: 5rem 0;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tool-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .tool-name {
+            font-weight: 600;
+        }
+        
+        /* Pricing section */
+        .pricing {
+            padding: 5rem 0;
+            background-color: #f1f5f9;
+        }
+        
+        .pricing-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-highlight {
+            position: absolute;
+            top: 1.5rem;
+            right: -3rem;
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+        }
+        
+        .pricing-header {
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-title {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-description {
+            color: var(--gray);
+        }
+        
+        .pricing-price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .pricing-original {
+            font-size: 1.5rem;
+            color: var(--gray);
+            text-decoration: line-through;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-icon {
+            color: var(--secondary);
+        }
+        
+        .limited-spots {
+            background: #fff4e5;
+            color: #c17207;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0;
+            display: inline-block;
+        }
+        
+        /* Instructor section */
+        .instructor {
+            padding: 5rem 0;
+        }
+        
+        .instructor-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .instructor-image {
+            flex: 0 0 300px;
+        }
+        
+        .instructor-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .instructor-content {
+            flex: 1;
+        }
+        
+        .instructor-name {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .instructor-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* FAQ section */
+        .faq {
+            padding: 5rem 0;
+            background-color: #f1f5f9;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordion {
+            margin-top: 3rem;
+        }
+        
+        .accordion-item {
+            background: white;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .accordion-header {
+            padding: 1.25rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion-content {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .accordion-item.active .accordion-content {
+            padding-bottom: 1.25rem;
+            max-height: 1000px;
+        }
+        
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Call to action */
+        .cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89f64e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-text {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-description {
+            max-width: 350px;
+            opacity: 0.8;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .copyright {
+            opacity: 0.7;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        /* Floating button */
+        .float-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 99;
+            background-color: var(--accent);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .float-button:hover {
+            transform: scale(1.1);
+            background-color: #ea580c;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 320px;
+            }
+            
+            .countdown-timer {
+                flex-wrap: wrap;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+            }
+            
+            .timeline-marker {
+                margin-bottom: 1rem;
+            }
+            
+            .program-timeline::before {
+                left: 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .pricing-price {
+                font-size: 3rem;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-cta {
+                width: 100%;
+            }
+            
+            .nav-cta .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container container">
+            <a href="#" class="logo">IRREEMPLAZABLE</a>
+            <div class="nav-cta">
+                <a href="#pricing" class="btn">Inscríbete ahora</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>DOMINA LA IA Y CONVIÉRTETE EN EL PROFESIONAL DEL FUTURO</h1>
+            <p>Potencia tu trabajo con tecnología, en lugar de ser reemplazado por ella. Automatiza hasta el 70% de tus tareas y destaca en el 30% de tu rol que realmente importa.</p>
+            
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-lg btn-accent">Quiero ser IRREEMPLAZABLE</a>
+                <a href="#program" class="btn btn-lg">Conocer el programa</a>
+            </div>
+            
+            <div class="countdown">
+                <div class="countdown-title">Próximo inicio: Jueves 17 de abril, 2025 | Solo 12 cupos disponibles</div>
+                <div class="countdown-timer">
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Días</span>
+                    </div>
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Horas</span>
+                    </div>
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutos</span>
+                    </div>
+                    <div class="countdown-unit">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿POR QUÉ SER IRREEMPLAZABLE?</h2>
+                <p class="section-subtitle">La revolución de la IA está creando dos tipos de profesionales: los que serán reemplazados por ella y los que la usarán para volverse indispensables.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="benefit-title">Multiplica tus resultados x10</h3>
+                    <p>Aprenderás a usar la IA para multiplicar tus resultados, convirtiéndote en el tipo de profesional que toda empresa necesita.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="benefit-title">Recupera hasta 70% de tu tiempo</h3>
+                    <p>Identifica exactamente qué tareas pueden ser optimizadas con IA y recupera hasta un 70% de tu día para enfocarte en lo que realmente importa.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="benefit-title">Potencia tu creatividad</h3>
+                    <p>Utiliza el poder de análisis de los modelos de lenguaje para resolver problemas complejos y fundamentar decisiones estratégicas.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="benefit-title">Automatiza procesos clave</h3>
+                    <p>Implementa sistemas automatizados que manejan por ti esos procesos que antes consumían tu día, sin necesidad de ser un experto técnico.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="benefit-title">Destaca en tu empresa</h3>
+                    <p>Implementarás proyectos de transformación digital que te permitirán potenciar tu gestión y destacar en tu área profesional.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="benefit-title">Asegura tu futuro laboral</h3>
+                    <p>Mientras otros temen ser reemplazados, tú te volverás irreemplazable al dominar la tecnología que está transformando todas las industrias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Professions section -->
+    <section class="professions" style="background-color: #f1f5f9; padding: 5rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿SERÁ RELEVANTE PARA MI PROFESIÓN?</h2>
+                <p class="section-subtitle">Sí, este programa te permitirá potenciar tus actividades, independientemente de tu profesión. Estos son algunas profesiones que se benefician de integrar la IA:</p>
+            </div>
+            
+            <div class="professions-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="profession-card" style="background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">Legal</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Abogados</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Jueces</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Notarios</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Fiscales</li>
+                    </ul>
+                </div>
+                
+                <div class="profession-card" style="background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">Analistas</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Analistas de Datos</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Analistas Financieros</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Analistas de Negocios</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Analistas de Sistemas</li>
+                    </ul>
+                </div>
+                
+                <div class="profession-card" style="background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">Líderes de Equipo</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Supervisores</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Jefes de Área</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Team Leaders</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Coordinadores de Equipo</li>
+                    </ul>
+                </div>
+                
+                <div class="profession-card" style="background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">Directores</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Directores Generales</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Directores Financieros</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Directores Comerciales</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Directores de Operaciones</li>
+                    </ul>
+                </div>
+                
+                <div class="profession-card" style="background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">Educación</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Docentes</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Profesores</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Instructores</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Capacitadores</li>
+                    </ul>
+                </div>
+                
+                <div class="profession-card" style="background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">Gestión</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Gerentes</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Administradores</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Coordinadores</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Project Managers</li>
+                    </ul>
+                </div>
+                
+                <div class="profession-card" style="background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">Servicios</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Consultores</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Asesores</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Especialistas en Marketing</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Comerciales</li>
+                    </ul>
+                </div>
+                
+                <div class="profession-card" style="background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">Tecnología</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Ingenieros</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Profesionales TI</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Desarrolladores</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Técnicos</li>
+                    </ul>
+                </div>
+                
+                <div class="profession-card" style="background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">Salud</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Médicos</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Psicólogos</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Enfermeros</li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Terapeutas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Program section -->
+    <section id="program" class="program">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">METODOLOGÍA DEL PROGRAMA</h2>
+                <p class="section-subtitle">Un bootcamp intensivo de 5 meses donde transformarás tu forma de trabajar con la Inteligencia Artificial, implementando sistemas reales que funcionan.</p>
+            </div>
+            
+            <!-- Methodology Icons -->
+            <div class="methodology-icons" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 3rem 0;">
+                <div class="methodology-icon" style="display: flex; flex-direction: column; align-items: center; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 1.5rem; border-radius: 0.5rem; width: 180px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;"><i class="fas fa-search"></i></div>
+                    <div style="font-weight: 700; font-size: 1.25rem;">1. Identificar Actividades Clave</div>
+                </div>
+                
+                <div class="methodology-icon" style="display: flex; flex-direction: column; align-items: center; background: linear-gradient(135deg, #047857 0%, #10b981 100%); color: white; padding: 1.5rem; border-radius: 0.5rem; width: 180px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;"><i class="fas fa-code"></i></div>
+                    <div style="font-weight: 700; font-size: 1.25rem;">2. Diseñar Prompts Hiperespecíficos</div>
+                </div>
+                
+                <div class="methodology-icon" style="display: flex; flex-direction: column; align-items: center; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 1.5rem; border-radius: 0.5rem; width: 180px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;"><i class="fas fa-brain"></i></div>
+                    <div style="font-weight: 700; font-size: 1.25rem;">3. Dominar los Razonadores</div>
+                </div>
+                
+                <div class="methodology-icon" style="display: flex; flex-direction: column; align-items: center; background: linear-gradient(135deg, #047857 0%, #10b981 100%); color: white; padding: 1.5rem; border-radius: 0.5rem; width: 180px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;"><i class="fas fa-cogs"></i></div>
+                    <div style="font-weight: 700; font-size: 1.25rem;">4. Integrar Herramientas IA</div>
+                </div>
+                
+                <div class="methodology-icon" style="display: flex; flex-direction: column; align-items: center; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 1.5rem; border-radius: 0.5rem; width: 180px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;"><i class="fas fa-route"></i></div>
+                    <div style="font-weight: 700; font-size: 1.25rem;">5. Automatizar Flujo Completo</div>
+                </div>
+            </div>
+            
+            <div class="program-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">
+                            <span class="timeline-weeks">Semanas 1-2</span>
+                            FASE 1: Identificar Actividades Clave
+                        </h3>
+                        <p>Analiza las tareas diarias y los procesos más relevantes para detectar oportunidades de mejora. Mapearás todas tus actividades laborales y priorizarás aquellas que consumen más tiempo o tienen mayor impacto.</p>
+                        <p><strong>Resultado clave:</strong> Identificación clara de las tareas clave y un plan estratégico para optimizarlas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">
+                            <span class="timeline-weeks">Semanas 3-6</span>
+                            FASE 2: Diseñar Prompts Hiper Específicos
+                        </h3>
+                        <p>Aprende a formular prompts ajustados a necesidades específicas. Iterarás y perfeccionarás tus prompts para maximizar su precisión y relevancia, creando una biblioteca personalizada para múltiples escenarios laborales.</p>
+                        <p><strong>Resultado clave:</strong> Prompts optimizados que aumentan exponencialmente la velocidad y precisión en tareas específicas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">
+                            <span class="timeline-weeks">Semanas 7-8</span>
+                            FASE 3: Dominar los Razonadores
+                        </h3>
+                        <p>Usa los modelos de lenguaje como copilotos para resolver problemas, generar ideas y fundamentar decisiones estratégicas. Aprenderás a aplicar IA para explorar nuevas perspectivas y mejorar la calidad de tus decisiones.</p>
+                        <p><strong>Resultado clave:</strong> Capacidad para utilizar razonadores como copilotos en decisiones estratégicas y creativas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">
+                            <span class="timeline-weeks">Semanas 9-15</span>
+                            FASE 4: Integrar Herramientas de IA
+                        </h3>
+                        <p>Configura herramientas específicas de IA en tu rutina diaria para optimizar tareas clave. Aprenderás a integrar estas soluciones en procesos cotidianos y a evaluar su impacto para maximizar resultados.</p>
+                        <p><strong>Resultado clave:</strong> Herramientas de IA integradas en los flujos de trabajo diarios, mejorando significativamente tu productividad.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">
+                            <span class="timeline-weeks">Semanas 16-20</span>
+                            FASE 5: Automatizar un Flujo Completo
+                        </h3>
+                        <p>Diseña un sistema completamente automatizado que combine prompts, herramientas de IA y procesos conectados. Mapearás, diseñarás e implementarás flujos automatizados para procesos críticos.</p>
+                        <p><strong>Resultado clave:</strong> Flujos autónomos completamente automatizados que liberan tu tiempo y reducen esfuerzos repetitivos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program details card -->
+            <div style="background: white; border-radius: 0.75rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 2.5rem; margin-top: 4rem;">
+                <h3 style="text-align: center; font-size: 1.75rem; margin-bottom: 2rem;">ESTO ES LO QUE INCLUYE IRREEMPLAZABLE</h3>
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+                    <div style="flex: 1; min-width: 280px;">
+                        <h4 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary);">5 Meses de Transformación</h4>
+                        <p style="margin-bottom: 1rem;">100% en línea vía Zoom</p>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <h5 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Sesiones</h5>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.25rem 0; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> 20 sesiones</li>
+                                <li style="padding: 0.25rem 0; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> 3 horas cada una</li>
+                                <li style="padding: 0.25rem 0; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> Semanales</li>
+                                <li style="padding: 0.25rem 0; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> Implementación práctica de IA</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 280px;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <h5 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Soporte</h5>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.25rem 0; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> Personalizado</li>
+                                <li style="padding: 0.25rem 0; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> Continuo</li>
+                                <li style="padding: 0.25rem 0; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> Resolución de dudas</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <h5 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Plataforma</h5>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.25rem 0; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> Recursos exclusivos</li>
+                                <li style="padding: 0.25rem 0; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> Material complementario</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; font-style: italic; margin-top: 1.5rem;">Acompañamiento semanal para tu dominio efectivo de la IA</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tools section -->
+    <section class="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">DOMINARÁS LAS HERRAMIENTAS QUE ESTÁN TRANSFORMANDO EL TRABAJO</h2>
+                <p class="section-subtitle">La automatización efectiva requiere un conjunto específico de herramientas y habilidades. Hemos seleccionado y organizado las tecnologías más impactantes del mercado, desde los modelos de lenguaje líderes hasta las herramientas de automatización sin código.</p>
+            </div>
+            
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Este stack tecnológico te permitirá automatizar procesos complejos, integrar sistemas y desarrollar soluciones innovadoras que te permitan destacar en cualquier puesto, independientemente de tu nivel técnico actual.</p>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 4rem;">
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <div style="background: linear-gradient(135deg, #047857 0%, #10b981 100%); color: white; padding: 1rem; border-radius: 0.5rem 0.5rem 0 0; font-weight: 700; font-size: 1.25rem; text-align: center;">
+                        LLMs Avanzados
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0 0 0.5rem 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <p>ChatGPT, Claude, Mistral, Deepseek, Grok</p>
+                    </div>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 1rem; border-radius: 0.5rem 0.5rem 0 0; font-weight: 700; font-size: 1.25rem; text-align: center;">
+                        Ingeniería de Prompts
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0 0 0.5rem 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <p>Diseño de prompts específicos y efectivos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 4rem;">
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <div style="background: linear-gradient(135deg, #047857 0%, #10b981 100%); color: white; padding: 1rem; border-radius: 0.5rem 0.5rem 0 0; font-weight: 700; font-size: 1.25rem; text-align: center;">
+                        Programación Básica
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0 0 0.5rem 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <p>JavaScript y Python para automatización</p>
+                    </div>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 1rem; border-radius: 0.5rem 0.5rem 0 0; font-weight: 700; font-size: 1.25rem; text-align: center;">
+                        Google Apps Script
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0 0 0.5rem 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <p>Automatización en Google Workspace</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 4rem;">
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <div style="background: linear-gradient(135deg, #047857 0%, #10b981 100%); color: white; padding: 1rem; border-radius: 0.5rem 0.5rem 0 0; font-weight: 700; font-size: 1.25rem; text-align: center;">
+                        Integración APIs
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0 0 0.5rem 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <p>Conexión de herramientas y sistemas</p>
+                    </div>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 1rem; border-radius: 0.5rem 0.5rem 0 0; font-weight: 700; font-size: 1.25rem; text-align: center;">
+                        Zapier
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0 0 0.5rem 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <p>Automatización sin código entre aplicaciones</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <div style="background: linear-gradient(135deg, #047857 0%, #10b981 100%); color: white; padding: 1rem; border-radius: 0.5rem 0.5rem 0 0; font-weight: 700; font-size: 1.25rem; text-align: center;">
+                        Prototipado Rápido
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0 0 0.5rem 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <p>Desarrollo y prueba de soluciones innovadoras</p>
+                    </div>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 1rem; border-radius: 0.5rem 0.5rem 0 0; font-weight: 700; font-size: 1.25rem; text-align: center;">
+                        Razonadores IA
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 0 0 0.5rem 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <p>Resolución de problemas complejos con IA</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; margin-top: 4rem; font-size: 1.5rem;">Herramientas específicas que dominarás</h3>
+            
+            <div class="tools-grid" style="margin-top: 2rem;">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="tool-name">ChatGPT</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="tool-name">Claude</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div class="tool-name">Mistral</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="tool-name">Midjourney</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <div class="tool-name">Copy.ai</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="tool-name">ElevenLabs</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="tool-name">Jasper</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div class="tool-name">Zapier</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="tool-name">Make.com</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="tool-name">Google Apps</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="tool-name">JavaScript</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="tool-name">Python</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">INVIERTE EN TU FUTURO PROFESIONAL</h2>
+                <p class="section-subtitle">Esta es la decisión más estratégica que puedes tomar para convertirte en un profesional irreemplazable en la era de la IA.</p>
+            </div>
+            
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <div class="pricing-highlight">¡OFERTA ESPECIAL!</div>
+                    
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">BOOTCAMP COMPLETO</h3>
+                        <p class="pricing-description">Domina la IA y Automatización Laboral</p>
+                    </div>
+                    
+                    <div class="pricing-original">USD $5,000</div>
+                    <div class="pricing-price">$997</div>
+                    
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">
+                            <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>5 meses de formación intensiva</span>
+                        </li>
+                        <li class="pricing-feature">
+                            <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Sesiones en vivo cada jueves (7pm-10pm)</span>
+                        </li>
+                        <li class="pricing-feature">
+                            <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Material y recursos exclusivos</span>
+                        </li>
+                        <li class="pricing-feature">
+                            <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Acceso al grupo privado de participantes</span>
+                        </li>
+                        <li class="pricing-feature">
+                            <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Certificado de finalización</span>
+                        </li>
+                        <li class="pricing-feature">
+                            <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Garantía de resultados</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="limited-spots">
+                        <i class="fas fa-user-clock"></i> Solo 12 cupos disponibles
+                    </div>
+                    
+                    <a href="https://wa.link/b9inp5" class="btn btn-lg btn-accent">¡Quiero inscribirme ahora!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guarantee section -->
+    <section class="instructor">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">GARANTÍA DE RESULTADOS</h2>
+            </div>
+            
+            <div class="instructor-container">
+                <div class="instructor-content">
+                    <p>Si asistes a las sesiones e implementas lo aprendido, garantizamos que al finalizar el bootcamp tendrás funcionando, <strong>por lo menos</strong>:</p>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">
+                            <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>3 prompts personalizados que te ahorrarán horas cada semana</span>
+                        </li>
+                        <li class="pricing-feature">
+                            <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>2 herramientas de IA integradas en tus flujos de trabajo</span>
+                        </li>
+                        <li class="pricing-feature">
+                            <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>1 proceso completo automatizado que antes consumía gran parte de tu tiempo</span>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;">Si no alcanzas estos resultados, recibirás soporte personalizado adicional sin costo hasta que lo logres. No nos conformamos con menos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Instructor section -->
+    <section class="instructor" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">CONOCE A TU INSTRUCTOR</h2>
+            </div>
+            
+            <div class="instructor-container">
+                <div class="instructor-image">
+                    <img src="/api/placeholder/400/400" alt="Nelson Portugal" />
+                </div>
+                <div class="instructor-content">
+                    <h3 class="instructor-name">Nelson Portugal</h3>
+                    <p class="instructor-title">Consultor en desarrollo personal y especialista en diseño de programas formativos</p>
+                    
+                    <p>Nelson es autor del libro El Círculo de Crecimiento y especialista en el diseño de programas formativos dirigidos a jefes, gerentes y propietarios(as) de empresas.</p>
+                    
+                    <p>Ha asesorado a profesionales de empresas como Cosapi, Minsur, Huawei, Entel, Colliers, PetroPerú, La Marina de Guerra del Perú, entre otras. Ha integrado diversas herramientas no code en la parte comercial y de marketing de diferentes empresas, y ha dictado talleres de IA para empresas del sector salud, educación y seguros.</p>
+                    
+                    <p>Administrador de profesión por la UPC, complementó su experiencia empresarial participando en el programa especializado en el Liderazgo de Firmas de Servicios Profesionales en la escuela de negocios de Harvard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PREGUNTAS FRECUENTES</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Qué requisitos necesito para participar?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Conocimientos básicos de modelos de lenguaje (qué son y para qué sirven), una cuenta activa de ChatGPT Plus u otro modelo de lenguaje similar, y ganas de transformar tu forma de trabajar con IA.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Necesito saber programar?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>No necesitas saber programar. Utilizaremos principalmente herramientas no-code y te enseñaremos los conceptos básicos de programación desde cero. El bootcamp está diseñado para profesionales de cualquier área, no se requieren conocimientos técnicos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Qué pasa si tengo dudas durante el programa?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Tendrás acceso a soporte personalizado para resolver cualquier duda o bloqueo que encuentres en tu proceso de implementación.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Qué nivel de conocimientos de IA necesito?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Si sabes lo básico sobre ChatGPT y has experimentado con prompts simples, es suficiente. El bootcamp se adapta tanto a principiantes como a usuarios intermedios.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Cuánto tiempo toma ver resultados?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Desde la primera semana comenzarás a implementar mejoras en tu flujo de trabajo. Al final del primer mes, ya tendrás sistemas funcionando que te ahorran horas cada semana.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿El contenido se actualiza?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Sí. El mundo de la IA evoluciona rápidamente y nuestro contenido se actualiza constantemente para incluir las últimas herramientas y mejores prácticas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Cuánto tiempo necesito dedicarle?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>3 horas semanales de sesiones en vivo más 7 horas adicionales para implementación. Recuerda: inviertes más tiempo ahora para ahorrar muchas más horas después. La automatización es una inversión que se paga sola.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Qué pasa si no logro implementar lo prometido?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Si asistes a todas las sesiones e implementas lo aprendido pero no logras tener funcionando los 3 prompts, 2 herramientas y 1 proceso automatizado, recibirás soporte personalizado adicional sin costo hasta que lo consigas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Puedo aplicar esto en mi industria específica?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>El bootcamp está diseñado para adaptarse a cualquier sector. Ya sea que trabajes en marketing, ventas, recursos humanos, finanzas o cualquier otra área, personalizaremos las implementaciones a tus necesidades específicas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Las sesiones quedan grabadas?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Sí. Aunque recomendamos asistir en vivo para aprovechar la interacción y el feedback inmediato, tendrás acceso a las grabaciones para repasar el contenido.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Qué herramientas necesito tener?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Además de tu cuenta de ChatGPT Plus (o similar), iremos incorporando herramientas según tus necesidades específicas. Muchas tienen versiones gratuitas o planes básicos accesibles.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            ¿Hay algún tipo de certificación?
+                            <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Más que un certificado, saldrás con sistemas reales implementados y funcionando en tu día a día. Sin embargo, sí otorgamos un certificado de finalización que valida tus nuevas capacidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA section -->
+    <section class="cta">
+        <div class="cta-content container">
+            <h2 class="cta-title">DOMINA LA IA O SÉ DOMINADO POR ELLA</h2>
+            <p class="cta-text">La pregunta no es "si" la IA transformará tu trabajo, sino "cuándo", y si estarás preparado para ello. Invierte en tu futuro profesional ahora.</p>
+            <a href="https://wa.link/b9inp5" class="btn btn-lg btn-accent">¡Quiero ser IRREEMPLAZABLE!</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">IRREEMPLAZABLE</div>
+                    <p class="footer-description">Bootcamp intensivo de IA y Automatización Laboral para convertirte en el profesional del futuro.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="#program">Programa</a></li>
+                        <li><a href="#pricing">Precios</a></li>
+                        <li><a href="#faq">Preguntas frecuentes</a></li>
+                        <li><a href="https://wa.link/b9inp5">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><a href="https://wa.link/b9inp5">WhatsApp</a></li>
+                        <li><a href="mailto:info@irreemplazable.com">info@irreemplazable.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 IRREEMPLAZABLE. Todos los derechos reservados.</div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating button -->
+    <a href="https://wa.link/b9inp5" class="float-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Scripts -->
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const targetDate = new Date('April 17, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Accordion functionality
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                accordionItems.forEach(accordion => {
+                    accordion.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
